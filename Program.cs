@@ -2,16 +2,16 @@
 {
     // Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-    Console.Write("Введите пятизачное число: ");
+    Console.Write("Введите пятизначное число: ");
     int num = Convert.ToInt32(Console.ReadLine());
     Console.WriteLine();
 
     if (num > 9999 && num < 100000)
     {
         int result1 = num /10000;
-        Console.WriteLine($"Первая цифра числа: {num} являетеся {result1}.");
+        Console.WriteLine($"Первая цифра числа: {num} является {result1}.");
         int result2 = num % 10;
-        Console.WriteLine($"Пятая цифра числа: {num} являетеся {result2}.");
+        Console.WriteLine($"Пятая цифра числа: {num} является {result2}.");
         
         if (result1 == result2)
         {
@@ -19,16 +19,16 @@
             Console.WriteLine($"Первая цифра {result1} идентична пятой цифре {result2}, продолжаем проверку является ли число {num} палиндромом.");
             Console.WriteLine();
             result1 = num /1000 % 10;
-            Console.WriteLine($"Вторая цифра числа: {num} являетеся {result1}.");
+            Console.WriteLine($"Вторая цифра числа: {num} является {result1}.");
             result2 = num % 100 / 10;
-            Console.WriteLine($"Четвертая цифра числа: {num} являетеся {result2}.");
+            Console.WriteLine($"Четвертая цифра числа: {num} является {result2}.");
         }
         else
         {
             Console.WriteLine();
             Console.WriteLine($"Первая цифра {result1} не идентична пятой цифре {result2}!");
             Console.WriteLine();
-            Console.WriteLine($"Число {num}: не являтея палиндромом!");
+            Console.WriteLine($"Число {num}: не является палиндромом!");
         }
         if (result1 == result2)
         {
@@ -36,16 +36,16 @@
             Console.WriteLine($"Вторая цифра {result1} идентична четвёртой цифре {result2}.");
             Console.WriteLine();
             int thd = num / 100 % 10;
-            Console.WriteLine($"Так как число {num} явлется пятизначным, третья цифра {thd} является общей.");
+            Console.WriteLine($"Так как число {num} является пятизначным, третья цифра {thd} является общей.");
             Console.WriteLine();
-            Console.WriteLine($"Число {num}: являтея палиндромом!");
+            Console.WriteLine($"Число {num}: является палиндромом!");
         }
         else
         {
             Console.WriteLine();
             Console.WriteLine($"Вторая цифра {result1} не идентична четвёртой цифре {result2}.");
             Console.WriteLine();
-            Console.WriteLine($"Число {num}: не являтея палиндромом!");
+            Console.WriteLine($"Число {num}: не является палиндромом!");
         } 
     }
     else 
